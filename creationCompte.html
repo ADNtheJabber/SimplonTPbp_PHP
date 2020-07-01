@@ -101,7 +101,7 @@
                 </form>
 
                 
-                <form action="connexion.php" class="myFormPhysique" method="POST" id="clientPhysique">
+                <form action="ajoutClientPhysique.php" class="myFormPhysique" method="POST" id="clientPhysique">
         
                     <div class="flexform">
         
@@ -204,30 +204,31 @@
                 </form>
     
 
-                <form action="ajoutCompte.php" method="POST" class="myFormCompteBloque" id="compteBloque">
+                <form action="ajoutCompteBloque.php" method="POST" class="myFormCompteBloque" id="compteBloque">
                         
                     <fieldset>
 
                         <legend>Informations: Compte Bloqué</legend>
 
                             <label for="numeroCompte" id="numeroCompte">Numero de compte: </label>
-                            <input type="text" id="numeroCompte" placeholder="numero de compte"/><br>
+                            <input type="text" id="numeroCompte" name="noCompteCB" placeholder="numero de compte"/><br>
                             <span id="numCompte_error"></span><br>
 
-                            <label for="typeCompte" id="TypeCompte">Numero de compte: </label>
-                            <input type="text" id="TypeCompte" placeholder="type de compte"/><br>
-                            <span id="numCompte_error"></span><br>
+                            <label for="typeCompte" id="TypeCompte">Type de compte: </label>
+                            <select name="typeCompteCB" id="compte">
+                                <option value="CompteEpargne">Compte Epargne</option>
+                            </select>
                          
                             <label for="fraisOuvCB" id="labelFraisOuvCB">Frais d'Ouverture:</label>
-                            <input type="text" id="fraisOuvCB" placeholder="frais d'ouverture"/><br>
+                            <input type="text" id="fraisOuvCB" name="fraisOuvCB" placeholder="frais d'ouverture"/><br>
                             <span id="fraisOuv_error"></span><br>
 
                             <label for="remunAnnuelle" id="labelRemunAnnuelleCB">Montant Remuneration Annuelle:</label>
-                            <input type="text" id="remunAnnuelleCB" placeholder="remuneration annuelle"/><br>
+                            <input type="text" id="remunAnnuelleCB" name="remuCB" placeholder="remuneration annuelle"/><br>
                             <span id="remun_error"></span><br>
                             
                             <label for="dateDeblocage" id="labelDateDeblocageCB">Date de RéOuverture:</label>
-                            <input type="date" id="dateDeblocage" placeholder="date de reouverture"/><br>
+                            <input type="date" id="dateDeblocage" name="dateDeblocage" placeholder="date de reouverture"/><br>
                             
                     </fieldset>
 
@@ -242,12 +243,22 @@
                         
                     <fieldset>
                         <legend>Informations: Compte Epargne - Simpe et Xewël</legend>
+
+                            <label for="numeroCompte" id="numeroCompte">Numero de compte: </label>
+                            <input type="text" id="numeroCompte" name="noCompteCE" placeholder="numero de compte"/><br>
+                            <span id="numCompte_error"></span><br>
+
+                            <label for="typeCompte" id="TypeCompte">Type de compte: </label>
+                            <select name="typeCompteCE" id="compte">
+                                <option value="CompteEpargne">Compte Epargne</option>
+                            </select>
+                            <span id="typeCompte_error"></span><br>
                          
                             <label for="fraisOuv" id="labelFraisOuvCE">Frais d'Ouverture:</label>
-                            <input type="text" id="fraisOuvCE" placeholder="frais d'ouverture"/><br>
+                            <input type="text" id="fraisOuvCE" name="fraisOuvCE" placeholder="frais d'ouverture"/><br>
 
                             <label for="remunAnnuelle" id="labelRemunAnnuelleCE">Montant Remuneration Annuelle:</label>
-                            <input type="text" id="remunAnnuelleCE" placeholder="remuneration annuelle"/><br>
+                            <input type="text" id="remunAnnuelleCE" name="remuCE" placeholder="remuneration annuelle"/><br>
 
                     </fieldset>
 
@@ -258,18 +269,28 @@
 
                 </form>
 
-                <form action="ajoutCompte.php" method="POST" class="myFormCompteCourant" id="compteCourant">
+                <form action="ajoutCompteCourant.php" method="POST" class="myFormCompteCourant" id="compteCourant">
                         
                     <fieldset>
 
                         <legend>Informations: Compte Courant</legend>
+
+                            <label for="numeroCompte" id="numeroCompte">Numero de compte: </label>
+                            <input type="text" id="numeroCompte" name="noCompteCC" placeholder="numero de compte"/><br>
+                            <span id="numCompte_error"></span><br>
+
+                            <label for="typeCompte" id="TypeCompte">Type de compte: </label>
+                            <select name="typeCompteCC" id="compte">
+                                <option value="CompteCourant">compte Courant</option>
+                            </select>
+                            <span id="typeCompte_error"></span><br>
                          
                             <label for="agios" id="labelAgiosCC">Agios Trimestrielle:</label>
-                            <input type="text" id="agiosCC" placeholder="agios tous les 03 mois"/><br>
+                            <input type="text" id="agiosCC" name="agiosCC" placeholder="agios tous les 03 mois"/><br>
                             <span id="agios_error"></span><br>
 
                             <label for="depotInitial" id="labelDepotInitialCC">Montant du dépot initial:</label>
-                            <input type="text" id="depotInitialCC" placeholder="depot initial à la creation"/><br>
+                            <input type="text" id="depotInitialCC" name="depotCC" placeholder="depot initial à la creation"/><br>
                             <span id="depotInit_error"></span><br>
                          
                     </fieldset>

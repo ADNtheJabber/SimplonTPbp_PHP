@@ -348,20 +348,20 @@ textarea {
 .myFormCompteBloque fieldset label,
 .myFormCompteEpargne fieldset label,
 .myFormCompteCourant fieldset label {
-    margin-top: 35px;
+    margin-top: 15px;
 }
 
 .myFormCompteBloque fieldset {
     background-color: rgba(241, 238, 233, 0.5);
-    height: 330px;
+    height: 500px;
 }
 .myFormCompteEpargne fieldset {
     background-color: rgba(241, 238, 233, 0.5);
-    height: 280px;
+    height: 350px;
 }
 .myFormCompteCourant fieldset {
     background-color: rgba(241, 238, 233, 0.5);
-    height: 300px;
+    height: 350px;
 }
       
 legend {
