@@ -28,9 +28,8 @@
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Listes des clients</a>
                     <div class="dropdown-content">
-                      <a href="#">Liste Clients Particuliers</a>
-                      <a href="#">Liste Clients Entreprises</a>
-                      <a href="#">Lister tous les clients</a>
+                      <a href="listeClientPhysique.php">Liste Clients Particuliers</a>
+                      <a href="listeClientEntreprise.php">Liste Clients Entreprises</a>
                     </div>
                 </li>
                 <li><a href="#">Virement</a></li>
@@ -280,8 +279,8 @@
                             <span id="numCompte_error"></span><br>
 
                             <label for="typeCompte" id="TypeCompte">Type de compte: </label>
-                            <select name="typeCompteCC" id="compte">
-                                <option value="CompteCourant">compte Courant</option>
+                            <select id="compte">
+                                <option value="CompteCourant" name="typeCompteCC">compte Courant</option>
                             </select>
                             <span id="typeCompte_error"></span><br>
                          

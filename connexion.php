@@ -4,7 +4,7 @@
     $username = "root";
     $password = "";
 
-    var_dump($_POST);
+    //var_dump($_POST);
 
     try {
         $conn = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);

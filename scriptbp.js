@@ -270,7 +270,7 @@ function afficher_form_courant(e){
 }
 
 
-/*function check_entrees_client(e) {
+    function check_entrees_client(e) {
         
     if (!nom_client_physique.value || nom_client_physique.length < 3 || nom_client_physique[0] === '') { 
         e.preventDefault();
@@ -404,4 +404,4 @@ function check_entrees_compte(e){
         e.preventDefault();
         location.reload();
     }
-    */
+    
