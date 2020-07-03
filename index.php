@@ -22,7 +22,23 @@
 
             <h3>Connexion</h3>
 
-            <label for=""></label>
+            <label for="worker">Poste: </label>
+            <select name="postChoice" id="post">
+                <option value="Administrateur">Administrateur</option>
+                <option value="Caissière">Caissière</option>
+                <option value="Responsable">Responsable de Compte</option>
+            </select><br>
+
+            <label for="login">Login: </label>
+            <input type="text" name="login" id="login"/><br>
+
+            <label for="mdp">Mot de passe: </label>
+            <input type="password" name="pwd" id="password"/><br>
+
+            <input type="submit" value="Se connecter" id="submitLog"/>
+            <input type="reset" value="Annuler" id="resetLog"/><br>
+
+            <p class="forgotPassword">Mot de passe oublié !, <a href="forgotPasswordController" target="_blank">Cliquez-ici.</a></p>
 
 
         </form>

@@ -12,3 +12,4 @@ RewriteRule ^clientPhysiqueController$ controller/clientPhysiqueController.php
 RewriteRule ^clientMoralController$ controller/clientMoralController.php
 RewriteRule ^compteController$ controller/compteController.php
 RewriteRule ^loginController$ controller/loginController.php
+RewriteRule ^forgotPasswordController$ controller/forgotPasswordController.php
