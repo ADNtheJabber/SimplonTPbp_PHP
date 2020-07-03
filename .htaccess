@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteRule ^.{0}$ index.php
+RewriteRule ^clientPhysique$ view/clientPhysique/liste.php
+RewriteRule ^clientMoral$ view/clientMoral/liste.php
+RewriteRule ^compteAll$ view/compte/compteAll.php
+RewriteRule ^compteBloque$ view/compte/compteBloque.php
+RewriteRule ^compteCourant$ view/compte/compteCourant.php
+RewriteRule ^compteEpargne$ view/compte/compteEpargne.php
+
+RewriteRule ^clientPhysiqueController$ controller/clientPhysiqueController.php
+RewriteRule ^clientMoralController$ controller/clientMoralController.php
+RewriteRule ^compteController$ controller/compteController.php
+RewriteRule ^loginController$ controller/loginController.php
