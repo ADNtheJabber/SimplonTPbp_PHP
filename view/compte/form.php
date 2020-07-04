@@ -8,8 +8,7 @@
 <body>
 
     
-</body>
-</html>               
+             
                
                
                <form action="compteController" method="POST" class="myFormCompte" id="formCompte">
@@ -110,3 +109,6 @@
                     </div>
 
                 </form>
+
+                </body>
+</html>  

@@ -1,5 +1,5 @@
 <?php
-    require 'dbConnect.php';
+    require_once 'dbConnect.php';
 
     //client entreprise req
     function addClientPhysique ($nom, $prenom, $tel, $adresse, $email, $identifiant, $salaire, $profession, $infosEmp){

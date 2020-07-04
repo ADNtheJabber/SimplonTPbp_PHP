@@ -1,5 +1,5 @@
 <?php
-    require 'dbConnect.php';
+    require_once 'dbConnect.php';
 
     //client entreprise req
     function addClientMoral ($nom, $adresse, $tel, $emai, $ninea, $regiscom){
