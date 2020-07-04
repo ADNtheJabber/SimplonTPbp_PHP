@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="author" content="Ababacar Diene Ndiaye"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="public/css/style.css"/>
+    <link rel="stylesheet" href="public/css/styleIndex.css"/>
     <title>Accueil BP</title>
 </head>
 <body>
@@ -15,12 +15,16 @@
         <p>Encore plus proche de vous !</p>
     </header>
 
+    <hr class="sepLine">
+
 
     <div class="content">
 
-        <form action="loginController" method="post">
+        <img class="avatar" src="public/img/mrRobot.jpg" alt="loginAvatar"/>
 
-            <h3>Connexion</h3>
+        <form class="loginForm" id="myLoginForm" action="loginController" method="post">
+
+            <h1>Connexion</h1>
 
             <label for="worker">Poste: </label>
             <select name="postChoice" id="post">
@@ -38,7 +42,7 @@
             <input type="submit" value="Se connecter" id="submitLog"/>
             <input type="reset" value="Annuler" id="resetLog"/><br>
 
-            <p class="forgotPassword">Mot de passe oublié !, <a href="forgotPasswordController" target="_blank">Cliquez-ici.</a></p>
+            <p class="forgotPassword"><a href="forgotPasswordController" target="_blank">Mot de passe oublié ? </a></p>
 
 
         </form>
