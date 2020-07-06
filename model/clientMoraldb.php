@@ -2,20 +2,36 @@
     require_once 'dbConnect.php';
 
     //client entreprise req
-    function addClientMoral ($nom, $adresse, $tel, $emai, $ninea, $regiscom){
-        $sql = "INSERT INTO client_entreprise VALUES (NULL, $nom, $adresse, $tel, $email, $ninea, $regiscom)";
 
-        $conn = getConnex();
+        
 
-        return $conn->exec($sql);
+    function addClientMoral ($clientMoral){
+
+        $connexion = new DbAccess();
+       
+        $conn = $connexion->getConnex();
+
+        //INSERT INTO `client_entreprise`(`id_entreprise`, `nom_entreprise`, `adresse`, `tel`, `email`, `ninea`, `regis_commerce`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])
+        
+        $sql = $conn->prepare("INSERT INTO `client_entreprise`(`id_entreprise`, `nom_entreprise`, `adresse`, `tel`, `email`, `ninea`, `regis_commerce`) 
+        
+        VALUES ('".$clientMoral->getNom()."','".$clientMoral->getAdresse()."', '".$clientMoral->getTel()."', '".$clientMoral->getEmail()."','".$clientMoral->getNinea()."','".$clientMoral->getRegiscom()."')");
+
+        $sql->execute();
+
+        return $sql;
     }
 
     function readClientMoral(){
-        $sql = "SELECT * FROM client_entreprise";
 
-        $conn = getConnex();
+        $connexion = new DbAccess();
+       
+        $conn = $connexion->getConnex();
+        
+        $sql = $conn->prepare("SELECT * FROM client_entreprise");
 
-        return $conn->query($sql);
+        $sql->execute();
 
+        return $sql;
     }
 ?>

@@ -27,7 +27,8 @@
             <h1>Connexion</h1>
 
             <label for="worker">Poste: </label>
-            <select name="postChoice" id="post">
+            <select name="postChoice" id="poste">
+                <optgroup>---Choisir son Poste---</optgroup>
                 <option value="Administrateur">Administrateur</option>
                 <option value="Caissière">Caissière</option>
                 <option value="Responsable">Responsable de Compte</option>
@@ -37,7 +38,7 @@
             <input type="text" name="login" id="login"/><br>
 
             <label for="mdp">Mot de passe: </label>
-            <input type="password" name="pwd" id="password"/><br>
+            <input type="password" name="password" id="password"/><br>
 
             <input type="submit" value="Se connecter" id="submitLog"/>
             <input type="reset" value="Annuler" id="resetLog"/><br>

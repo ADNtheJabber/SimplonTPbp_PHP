@@ -377,6 +377,25 @@ label {
     margin-top: 30px;
 }
 
+
+table, th, td {
+    padding: 3px;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.messageOk {
+    color: green;
+    background-color: white;
+    border: 1px solid green;
+}
+
+.messageNo {
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+}
+
 .btns {
     display: block;
     float: right;

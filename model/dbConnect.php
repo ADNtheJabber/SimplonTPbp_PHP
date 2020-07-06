@@ -1,20 +1,24 @@
 <?php 
 
-   function getConnex(){
+    Class DbAccess{
 
-        $host = 'localhost';
-        $dbname = 'banquepopulaire';
-        $user = 'root';
-        $pwd = '';
+        public function getConnex(){
 
-        $dsn = "mysql:host = $host; dbname = $dbname";
-
-        try {
-            $connex = new PDO("$dsn, $user, $pwd");
-        } catch (PDOException $e) {
-            die ('Erreur : '.$e->getMessage());
-        }
-        return $connex;
-   
-   }
+            $host = 'localhost';
+            $dbname = 'banquepopulaire';
+            $user = 'root';
+            $pwd = '';
+    
+            $dsn = "mysql:host = $host; dbname = $dbname";
+    
+            try {
+                $connex = new PDO($dsn, $user, $pwd);
+            } catch (PDOException $e) {
+                die ('Erreur : '.$e->getMessage());
+            }
+            return $connex;
+       
+       }
+    }
+  
 ?>

@@ -6,10 +6,35 @@
     <title>Formulaire de création de Compte</title>
 </head>
 <body>
+            
+    <header>
+<!--logo et nom banque-->
+        <div class="logo">
+            <img src="public/img/bplogo.png" alt="logo BP"/>
+            <h2>Banque du Peuple</h2>
+        </div>
+<!--end of logo et nom banque-->
 
-    
-             
-               
+<!--nav-->               
+       <nav>
+            <ul>
+                <li><a href="index">Accueil</a></li>
+                <li><a href="ajoutClient">Ajouter client</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Listes des clients</a>
+                    <div class="dropdown-content">
+                      <a href="listePhysiqueController">Liste Clients Particuliers</a>
+                      <a href="listeMoralController">Liste Clients Entreprises</a>
+                    </div>
+                </li>
+                <li><a href="#">Virement</a></li>
+                <li><a href="#">Assistance</a></li>
+            </ul>
+       </nav>
+<!--end of nav-->  
+        
+    </header>
+ 
                
                <form action="compteController" method="POST" class="myFormCompte" id="formCompte">
                         
@@ -45,7 +70,7 @@
 
                 </form>
 
-                <form action="ajoutCompteBloque.php" method="POST" class="myFormCompteBloque" id="compteBloque">
+                <form action="compteController" method="POST" class="myFormCompteBloque" id="compteBloque">
                         
                     <fieldset>
 
@@ -80,7 +105,7 @@
 
                 </form>
 
-                <form action="ajoutCompte.php" method="POST" class="myFormCompteEpargne" id="compteEpargne">
+                <form action="compteController" method="POST" class="myFormCompteEpargne" id="compteEpargne">
                         
                     <fieldset>
                         <legend>Informations: Compte Epargne - Simpe et Xewël</legend>
