@@ -6,7 +6,6 @@
 
     if (isset($_POST)) {
 
-        
             $clientMoral = new clientMoral($_POST['nomEntreprise'], $_POST['adresseEntreprise'], $_POST['telEntreprise'], $_POST['emailEntreprise'], $_POST['ninea'], $_POST['regiscommerce']);
             
             $clientMoral->setNom($_POST['nomEntreprise']);

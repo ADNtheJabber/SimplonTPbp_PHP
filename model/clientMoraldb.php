@@ -2,7 +2,6 @@
     require_once 'dbConnect.php';
 
     //client entreprise req
-
         
 
     function addClientMoral ($clientMoral){
@@ -22,7 +21,7 @@
         return $sql;
     }
 
-    function readClientMoral(){
+    function readClientMoral() {
 
         $connexion = new DbAccess();
        
