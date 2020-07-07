@@ -1,6 +1,6 @@
 <?php 
 
-    Class DbAccess{
+    Class DbAccess {
 
         public function getConnex(){
 

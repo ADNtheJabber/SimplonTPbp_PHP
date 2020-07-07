@@ -34,6 +34,7 @@ nav {
     background: rgba(0, 195, 199, 0.51);
     height: 50px;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 nav ul {
@@ -102,7 +103,7 @@ header h4 {
     display: inline-flex;
 }
 
-.allForms {
+/* .allForms {
     display: none;
 }
 .allForms form {
@@ -110,7 +111,7 @@ header h4 {
     flex-direction: column;
     margin-right: 40px;
 }
-
+ */
 
 .choices {
     margin-top: 60px;
@@ -119,6 +120,7 @@ header h4 {
 }
 
 .choixClient {
+    display: block;
     background: rgba(0, 195, 199, 0.51);
     width: 250px;
     height: 150px;
@@ -182,7 +184,7 @@ header h4 {
 }
 
 
-.search {
+/* .search {
     margin-bottom: 10px;
     margin-top: 40px;
     padding: 5px 10px;
@@ -226,7 +228,7 @@ header h4 {
     right: 25px;
     color: gray;
     font-size: 25px;
-}
+} */
 .situationPro {
     display: none;
     padding-top: 15px;
@@ -306,18 +308,17 @@ textarea:focus {
     width: 320px;
 }
 
-.myFormCompteBloque,
-.myFormCompteCourant,
-.myFormCompteEpargne {
+.compteForm {
+    display: block;
+}
+.myFormCompte {
     margin-top: 50px;
     width: 900px;
     display: none;
 }
 
-.myFormCompteBloque input[type="text"],
-.myFormCompteBloque input[type="date"],
-.myFormCompteEpargne input[type="text"],
-.myFormCompteCourant input[type="text"] {
+.myFormCompte input[type="text"],
+.myFormCompte input[type="date"] {
     border: 0;
     background: white;
     margin: 30px;
@@ -332,9 +333,7 @@ textarea:focus {
     transition: 0,5s;
 }
 
-.myFormCompteBloque input[type="text"]:focus,
-.myFormCompteEpargne input[type="text"]:focus,
-.myFormCompteCourant input[type="text"]:focus {
+.myFormCompteBloque input[type="text"]:focus {
     border-color: green;
     width: 350px;
 }
@@ -345,25 +344,12 @@ textarea {
     font-size: 14px;
 }
 
-.myFormCompteBloque fieldset label,
-.myFormCompteEpargne fieldset label,
-.myFormCompteCourant fieldset label {
+.myFormCompte fieldset label {
     margin-top: 15px;
-}
-
-.myFormCompteBloque fieldset {
     background-color: rgba(241, 238, 233, 0.5);
     height: 500px;
 }
-.myFormCompteEpargne fieldset {
-    background-color: rgba(241, 238, 233, 0.5);
-    height: 350px;
-}
-.myFormCompteCourant fieldset {
-    background-color: rgba(241, 238, 233, 0.5);
-    height: 350px;
-}
-      
+
 legend {
     background-color:rgba(0, 195, 199, 0.51);
     color: white;

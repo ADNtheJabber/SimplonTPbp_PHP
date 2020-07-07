@@ -1,5 +1,5 @@
 <?php
-    require 'connexion.php';
+    require_once '.php';
 
     //select client entreprise req
     $requete = $conn->prepare('SELECT * FROM client_entreprise');

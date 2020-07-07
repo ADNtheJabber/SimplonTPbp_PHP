@@ -76,7 +76,7 @@ Class ClientMoral {
         return $this->regiscom;
     }
     
-    public function setRegistre($regiscom){
+    public function setRegiscom($regiscom){
         $this->regiscom = $regiscom;
     }
 

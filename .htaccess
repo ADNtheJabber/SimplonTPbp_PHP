@@ -1,19 +1,17 @@
 RewriteEngine On
 
 RewriteRule ^.{0}$ index.php
+RewriteRule ^index$ index.php
 RewriteRule ^accueil$ view/accueil.php
 RewriteRule ^ajoutClient$ view/client/form.php
+RewriteRule ^ajoutCompte$ view/compte/form.php
 RewriteRule ^listeMoral$ view/client/listeMoral.php
 RewriteRule ^listePhysique$ view/client/listePhysique.php
 RewriteRule ^compteAll$ view/compte/compteAll.php
-RewriteRule ^compteBloque$ view/compte/compteBloque.php
-RewriteRule ^compteCourant$ view/compte/compteCourant.php
-RewriteRule ^compteEpargne$ view/compte/compteEpargne.php
+
 
 RewriteRule ^clientPhysiqueController$ controller/clientPhysiqueController.php
 RewriteRule ^clientMoralController$ controller/clientMoralController.php
-RewriteRule ^listeMoralController$ controller/listeMoralController.php
-RewriteRule ^listePhysiqueController$ controller/listePhysiqueController.php
 RewriteRule ^compteController$ controller/compteController.php
 RewriteRule ^loginController$ controller/loginController.php
 RewriteRule ^forgotPasswordController$ controller/forgotPasswordController.php

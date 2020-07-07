@@ -24,11 +24,12 @@
             <ul>
                 <li><a href="index">Accueil</a></li>
                 <li><a href="ajoutClient">Ajouter client</a></li>
+                <li><a href="ajoutCompte">Ajouter compte</a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Listes des clients</a>
                     <div class="dropdown-content">
-                      <a href="listePhysiqueController">Liste Clients Particuliers</a>
-                      <a href="listeMoralController">Liste Clients Entreprises</a>
+                      <a href="listePhysique">Liste Clients Particuliers</a>
+                      <a href="listeMoral">Liste Clients Entreprises</a>
                     </div>
                 </li>
                 <li><a href="#">Virement</a></li>
@@ -42,7 +43,7 @@
 
     <h1>Donnees de l'employe a afficher ici</h1>
 
-    <script src="scriptbp.js"></script>
+    <!-- <script src="scriptbp.js"></script> -->
 
 </body>
 </html>
