@@ -22,7 +22,7 @@
 <!--nav-->               
        <nav>
             <ul>
-                <li><a href="index">Accueil</a></li>
+                <li><a href="accueil">Accueil</a></li>
                 <li><a href="ajoutClient">Ajouter client</a></li>
                 <li><a href="ajoutCompte">Ajouter compte</a></li>
                 <li class="dropdown">
@@ -40,48 +40,61 @@
         
     </header>
  
-               <div class="compteForm">
-
+              
                <form action="compteController" method="POST" class="myFormCompte" id="formCompte">
                         
                         <fieldset>
     
                             <legend>Informations du Compte </legend>
     
-                                <label for="typeCompte" id="TypeCompte">Type de compte: </label>
-    
-                                <input type="radio" id="courant" name="compte" value="courant">
-                                <label for="courant">Compte Courant</label><br>
-    
-                                <input type="radio" id="epargne" name="compte" value="epargne">
-                                <label for="epargne">Compte Epargne</label><br>
-    
-                                <input type="radio" id="bloque" name="compte" value="bloque">
-                                <label for="bloque">Compte Bloque</label><br>
-    
-                                <label for="numeroCompte" id="numeroCompte">Numero de compte: </label>
+                            <label for="typeCompte" id="TypeCompte" name="typeCompte" >Type de compte: </label><br>
+                                <select name="typeCompte" id="type">
+                                    <option value="courant">Compte Courant</option>
+                                    <option value="epargne">Compte Epargne</option>
+                                    <option value="bloque">Compte Bloque</option>
+                                </select>    
+
+                            <label for="numeroCompte" id="numeroCompte">Numero de compte: </label>
                                 <input type="text" id="numeroCompte" name="noCompte" placeholder="numero de compte"/><br>
                                 <span id="numCompte_error"></span><br>
     
-                                <label for="fraisOuv" id="labelFraisOuv">Frais d'Ouverture:</label>
+                            <label for="fraisOuv" id="labelFraisOuv">Frais d'Ouverture:</label>
                                 <input type="text" id="fraisOuv" name="fraisOuv" placeholder="frais d'ouverture"/><br>
                                 <span id="fraisOuv_error"></span><br>
                                                          
-                                <label for="remunAnnuelle" id="labelRemunAnnuelle">Montant Remuneration Annuelle:</label>
+                            <label for="remunAnnuelle" id="labelRemunAnnuelle">Montant Remuneration Annuelle:</label>
                                 <input type="text" id="remunAnnuelle" name="remu" placeholder="remuneration annuelle"/><br>
                                 <span id="remun_error"></span><br>
     
-                                <label for="agios" id="labelAgiosCC">Agios Trimestrielle:</label>
+                            <label for="agios" id="labelAgiosCC">Agios Trimestrielle:</label>
                                 <input type="text" id="agiosCC" name="agiosCC" placeholder="agios tous les 03 mois"/><br>
                                 <span id="agios_error"></span><br>
     
-                                <label for="depotInitial" id="labelDepotInitialCC">Montant du dépot initial:</label>
+                            <label for="depotInitial" id="labelDepotInitialCC">Montant du dépot initial:</label>
                                 <input type="text" id="depotInitialCC" name="depotCC" placeholder="depot initial à la creation"/><br>
                                 <span id="depotInit_error"></span><br>
     
-                                <label for="dateDeblocage" id="labelDateDeblocage">Date de RéOuverture:</label>
+                            <label for="dateDeblocage" id="labelDateDeblocage">Date de RéOuverture:</label>
                                 <input type="date" id="dateDeblocage" name="dateDeblocage" placeholder="date de reouverture"/><br>
                                 <span id="date_error"></span><br>
+
+                            <label for="client">Client Associé: </label>
+
+                                <div class="search_box" id="byCNI">
+                                    <input type="number" placeholder="saisir le cni ...">
+                                    <button><i class="fa fa-search" id="goSearch"></i></button>
+                                </div>
+
+                                  <!-- <label for="entreprise">Client Moral-</label>
+                                <input type="radio" name="searchInput"id="searchEntreprise"/><br> -->
+
+                                <!-- <label for="physique">Client Physique-</label>
+                                <input type="radio" name="searchInput" id="searchPhysique"/>
+
+                                <div class="search_box" id="byId">
+                                    <input type="text" placeholder="saisir un identifiant : cni, passport ...">
+                                    <button><i class="fa fa-search" id="goSearch"></i></button>
+                                </div> -->
                              
                         </fieldset>
     
@@ -90,8 +103,6 @@
                             <input type="reset" id="reset" value="Annuler"/>
                         </div>
 
-               </div>
-               
 
     <script src="public/js/scriptCompte.js"></script>         
 </body>

@@ -26,7 +26,7 @@
 <!--nav-->               
         <nav>
             <ul>
-                <li><a href="index">Accueil</a></li>
+                <li><a href="accueil">Accueil</a></li>
                 <li><a href="ajoutClient">Ajouter client</a></li>
                 <li><a href="ajoutCompte">Ajouter compte</a></li>
                 <li class="dropdown">

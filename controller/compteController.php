@@ -11,13 +11,13 @@
             $compte = new Compte();
             
             $compte->setNumcompte($_POST['noCompte']);
-            $compte->setTypeCompte($_POST['compte']);
+            $compte->setTypeCompte($_POST['typeCompte']);
             $compte->setFraisOuv($_POST['fraisOuv']);
             $compte->setRemuneration($_POST['remu']);
             $compte->setDateDeblocage($_POST['dateDeblocage']);
             $compte->setDepotInitial($_POST['depotCC']);
-            $compte->setIdClientPhysique($_POST['setIdClientPhysique'] !='' ? $_POST['setIdClientPhysique'] : NULL);
-            $compte->setIdClentEntreprise($_POST['setIdClentEntreprise'] !='' ? $_POST['setIdClentEntreprise'] : NULL);
+            $compte->setIdClientPhysique($_POST['IdClientPhysique'] !='' ? $_POST['IdClientPhysique'] : NULL);
+            $compte->setIdClientEntreprise($_POST['IdClentEntreprise'] !='' ? $_POST['IdClentEntreprise'] : NULL);
                         
 
             $agios = new Agios();

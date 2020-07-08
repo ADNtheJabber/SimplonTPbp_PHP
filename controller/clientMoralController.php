@@ -6,7 +6,7 @@
 
     if (isset($_POST)) {
 
-            $clientMoral = new clientMoral ();
+            $clientMoral = new ClientMoral();
             
             $clientMoral->setNom($_POST['nomEntreprise']);
             $clientMoral->setAdresse($_POST['adresseEntreprise']);

@@ -2,8 +2,8 @@
 
     class Agios {
         
-        private $id;
-        private $description;
+        // private $id;
+        // private $description;
         private $montant;
         private $compteAssoc;
 
@@ -23,21 +23,21 @@
         //     }
         // }
 
-        public function getId(){
-            return $this->$id;
-        }
+        // public function getId(){
+        //     return $this->$id;
+        // }
 
-        public function setId($id){
-            $this->id = $id;
-        }
+        // public function setId($id){
+        //     $this->id = $id;
+        // }
 
-        public function getDescription(){
-            return $this->$description;
-        }
+        // public function getDescription(){
+        //     return $this->$description;
+        // }
 
-        public function setDescription($description){
-            $this->description = $description;
-        }
+        // public function setDescription($description){
+        //     $this->description = $description;
+        // }
 
         public function getMontant(){
             return $this->$montant;

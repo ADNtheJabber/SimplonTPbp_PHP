@@ -308,20 +308,22 @@ textarea:focus {
     width: 320px;
 }
 
-.compteForm {
-    display: block;
-}
+
 .myFormCompte {
     margin-top: 50px;
+    margin-left: 100px;
     width: 900px;
-    display: none;
+    display: block;
 }
 
 .myFormCompte input[type="text"],
-.myFormCompte input[type="date"] {
+.myFormCompte input[type="date"],
+.myFormCompte input [type="radio"],
+.myFormCompte input [type="number"] {
     border: 0;
     background: white;
     margin: 30px;
+    margin-left: 50px;
     text-align: center;  
     border: 1px solid green;
     padding: 5px 10px;
@@ -333,14 +335,12 @@ textarea:focus {
     transition: 0,5s;
 }
 
-.myFormCompteBloque input[type="text"]:focus {
-    border-color: green;
-    width: 350px;
-}
 
 .myFormPhysique input[type="text"], 
 .myFormEntreprise input[type="text"],
-textarea {
+textarea,
+.myFormCompte input [type="radio"],
+.myFormCompte input [type="number"] {
     font-size: 14px;
 }
 
@@ -348,6 +348,7 @@ textarea {
     margin-top: 15px;
     background-color: rgba(241, 238, 233, 0.5);
     height: 500px;
+    margin-left: 50px;
 }
 
 legend {
