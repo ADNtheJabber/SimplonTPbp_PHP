@@ -15,7 +15,7 @@
             $clientPhysique->setTel($_POST['telPhysique']);
             $clientPhysique->setEmail($_POST['emailPhysique']);
             $clientPhysique->setIdentifiant($_POST['cni']);
-            $clientPhysique->setSalaire($_POST['salaire'] !='' ? $_POST['salaire'] : 0 );
+            $clientPhysique->setSalaire($_POST['salaire'] !='' ? $_POST['salaire'] : 0);
             $clientPhysique->setProfession($_POST['profession']);
             $clientPhysique->setInfosEmp($_POST['infos_emp']);
             

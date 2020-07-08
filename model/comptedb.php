@@ -1,40 +1,32 @@
 <?php
     require_once 'dbConnect.php';
 
-    function addCompteCourant($id, $numcompte, $typeCompte, $fraisOuv, $remuneration, $dateDeblocage, $depotInitial, $idClientPhysique, $idClientEntreprise){
-        $sql = "INSERT INTO compte (idCompte, numcompte, type_compte, fraisOuverture, remuAnnuelle, dateDeblocage, depotInitialCC, id_client_physique, id_client_entreprise) 
-                VALUES (NULL, $numcompte, $typeCompte, $fraisOuv, $remuneration, $dateDeblocage, $depotInitial, $idClientPhysique, $idClientEntreprise)";
+    function addCompte($compte){
+        $connexion = new DbAccess();
+       
+        $conn = $connexion->getConnex();
 
-        $conn = getConnex();
+        return $conn->exec("INSERT INTO `compte`(`idCompte`, `numcompte`, `type_compte`, `fraisOuverture`, `remuAnnuelle`, `dateDeblocage`, `depotInitialCC`, `id_client_physique`, `id_client_entreprise`) VALUES ('".$compte->getNom()."','".$compte->getAdresse()."', '".$compte->getTel()."', '".$compte->getEmail()."','".$compte->getNinea()."','".$compte->getRegiscom()."')");
 
-        return $conn->exec($sql);
     }
 
 
-    function addCompteEpargne($id, $numcompte, $typeCompte, $fraisOuv, $remuneration, $dateDeblocage, $depotInitial, $idClientPhysique, $idClientEntreprise){
-        $sql = "INSERT INTO compte (idCompte, numcompte, type_compte, fraisOuverture, remuAnnuelle, dateDeblocage, depotInitialCC, id_client_physique, id_client_entreprise) 
-                VALUES (NULL, $numcompte, $typeCompte, $fraisOuv, $remuneration, $dateDeblocage, $depotInitial, $idClientPhysique, $idClientEntreprise)";
+    function addAgios($agios){
+        $connexion = new DbAccess();
+       
+        $conn = $connexion->getConnex();
 
-        $conn = getConnex();
+        return $conn->exec("INSERT INTO INSERT INTO `agioscc`(`idAgiosCC`, `descriptionAgios`, `montantAgios`, `numcompte`) 
+                VALUES (NULL, '','".$agios->getMontant()."','".$agios->getCompteAssoc()."')");
 
-        return $conn->exec($sql);
     }
 
-    
-    function addCompteBloque($id, $numcompte, $typeCompte, $fraisOuv, $remuneration, $dateDeblocage, $depotInitial, $idClientPhysique, $idClientEntreprise){
-        $sql = "INSERT INTO compte (idCompte, numcompte, type_compte, fraisOuverture, remuAnnuelle, dateDeblocage, depotInitialCC, id_client_physique, id_client_entreprise) 
-                VALUES (NULL, $numcompte, $typeCompte, $fraisOuv, $remuneration, $dateDeblocage, $depotInitial, $idClientPhysique, $idClientEntreprise)";
-
-        $conn = getConnex();
-
-        return $conn->exec($sql);
-    }
-
-    
+   
     function readAllCompte(){
-        $sql = "SELECT * FROM compte";
+        $connexion = new DbAccess();
+       
+        $conn = $connexion->getConnex();
 
-        $conn = getConnex();
+        return $conn->exec("SELECT * FROM compte");
 
-        return $conn->exec($sql);
     }

@@ -12,6 +12,7 @@
 
     }
 
+    
     function readClientPhysique(){
         $connexion = new DbAccess();
 

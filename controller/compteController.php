@@ -1,32 +1,41 @@
 <?php
     require_once '../model/comptedb.php';
     require_once '../entities/compte.php';
+    require_once '../entities/agios.php';
   
     extract($_POST);
 
     if (isset($_POST)) {
 
         
-            $compte = new compte($_POST['nomPhysique'], $_POST['prenomPhysique'], $_POST['adressePhysique'], $_POST['telPhysique'], $_POST['emailPhysique'], $_POST['cni'], $_POST['profession'], $_POST['salaire'], $_POST['infos_emp']);
+            $compte = new Compte();
             
-            $compte->setNumcompte($_POST['nomPhysique']);
-            $compte->setTypeCompte($_POST['prenomPhysique']);
-            $compte->setFraisOuv($_POST['adressePhysique']);
-            $compte->setRemuneration($_POST['telPhysique']);
-            $compte->setDateDeblocage($_POST['emailPhysique']);
-            $compte->setDepotInitial($_POST['cni']);
-            $compte->setIdClientPhysique($_POST['salaire']);
-            $compte->setIdClentEntreprise($_POST['profession']);
+            $compte->setNumcompte($_POST['noCompte']);
+            $compte->setTypeCompte($_POST['compte']);
+            $compte->setFraisOuv($_POST['fraisOuv']);
+            $compte->setRemuneration($_POST['remu']);
+            $compte->setDateDeblocage($_POST['dateDeblocage']);
+            $compte->setDepotInitial($_POST['depotCC']);
+            $compte->setIdClientPhysique($_POST['setIdClientPhysique'] !='' ? $_POST['setIdClientPhysique'] : NULL);
+            $compte->setIdClentEntreprise($_POST['setIdClentEntreprise'] !='' ? $_POST['setIdClentEntreprise'] : NULL);
                         
 
-            $log = addcompte($compte);
+            $agios = new Agios();
+
+            $agios->setMontant($_POST['agiosCC']);
+            $agios->setCompteAssoc($_POST['noCompte']);
+
+            $log1 = addAgios($agios);
+
+            $log2 = addcompte($compte);
             
-            if ($log) {
+            if ($log1 && $log2) {
                echo 'Ajout effectue avec succes !';
             } else {
-                echo 'Ajout Non effectue',
-                header('location:accueil');
+                echo 'Ajout Non effectue';
             }
+
+            
         }
 
         // idCompte numcompte type_compte fraisOuverture remuAnnuelle dateDeblocage depotInitialCC id_client_physique id_client_entreprise
