@@ -6,7 +6,7 @@
 
     if (isset($_POST)) {
 
-            $clientMoral = new clientMoral ($_POST['nomEntreprise'], $_POST['adresseEntreprise'], $_POST['telEntreprise'], $_POST['emailEntreprise'], $_POST['ninea'], $_POST['regiscommerce']);
+            $clientMoral = new clientMoral ();
             
             $clientMoral->setNom($_POST['nomEntreprise']);
             $clientMoral->setAdresse($_POST['adresseEntreprise']);
@@ -16,13 +16,13 @@
             $clientMoral->setRegiscom($_POST['regiscommerce']);
             
 
-            $log = $clientMoral->addClientMoral($clientMoral);
+            $log = addClientMoral($clientMoral);
+
+            // var_dump($log);
             
             if ($log) {
                echo 'Ajout effectue avec succes !';
             } else {
-                echo 'Ajout Non effectue',
-                header('location:accueil');
+                echo 'Ajout Non effectue';
             }
         }
-    

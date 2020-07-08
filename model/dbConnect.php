@@ -9,10 +9,10 @@
             $user = 'root';
             $pwd = '';
     
-            $dsn = "mysql:host = $host; dbname = $dbname";
+            $dsn = "mysql:host=$host;dbname=$dbname";
     
             try {
-                $connex = new PDO($dsn, $user, $pwd);
+                return new PDO($dsn, $user, $pwd);
             } catch (PDOException $e) {
                 die ('Erreur : '.$e->getMessage());
             }
