@@ -2,9 +2,7 @@
 
     class Agios {
         
-        // private $id;
-        // private $description;
-        private $montant;
+        private $montantAgios;
         private $compteAssoc;
 
 
@@ -12,39 +10,12 @@
 
         }
 
-        // public function hydrate(array $donnees) {
-
-        //     foreach ($donnees as $key => $value) {
-        //         $method = 'set'.ucfirst($key);
-        
-        //         if (method_exists($this, $method)) {
-        //               $this->$method($value);
-        //         }
-        //     }
-        // }
-
-        // public function getId(){
-        //     return $this->$id;
-        // }
-
-        // public function setId($id){
-        //     $this->id = $id;
-        // }
-
-        // public function getDescription(){
-        //     return $this->$description;
-        // }
-
-        // public function setDescription($description){
-        //     $this->description = $description;
-        // }
-
-        public function getMontant(){
-            return $this->$montant;
+        public function getMontantAgios(){
+            return $this->$montantAgios;
         }
 
-        public function setMontant($montant){
-            $this->montant = $montant;
+        public function setMontantAgios($montantAgios){
+            $this->montantAgios = $montantAgios;
         }
 
         public function getCompteAssoc(){

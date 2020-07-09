@@ -6,20 +6,20 @@
        
         $conn = $connexion->getConnex();
 
-        return $conn->exec("INSERT INTO `compte`(`idCompte`, `numcompte`, `type_compte`, `fraisOuverture`, `remuAnnuelle`, `dateDeblocage`, `depotInitialCC`, `id_client_physique`, `id_client_entreprise`) VALUES ('".$compte->getNom()."','".$compte->getAdresse()."', '".$compte->getTel()."', '".$compte->getEmail()."','".$compte->getNinea()."','".$compte->getRegiscom()."')");
+        return $conn->exec("INSERT INTO `compte`(`idCompte`, `numcompte`, `type_compte`, `fraisOuverture`, `remuAnnuelle`, `dateDeblocage`, `depotInitialCC`, `id_client_physique`, `id_client_entreprise`) VALUES (NULL,'".$compte->getNumCompte()."','".$compte->getTypeCompte()."', '".$compte->getFraisOuv()."', '".$compte->getRemuneration()."','".$compte->getDateDeblocage()."','".$compte->getDepotInitial()."','','')");
 
     }
 
 
-    function addAgios($agios){
-        $connexion = new DbAccess();
+    // function addAgios($agios){
+    //     $connexion = new DbAccess();
        
-        $conn = $connexion->getConnex();
+    //     $conn = $connexion->getConnex();
 
-        return $conn->exec("INSERT INTO INSERT INTO `agioscc`(`idAgiosCC`, `descriptionAgios`, `montantAgios`, `numcompte`) 
-                VALUES (NULL, '','".$agios->getMontant()."','".$agios->getCompteAssoc()."')");
+    //     return $conn->exec("INSERT INTO INSERT INTO `agioscc`(`idAgiosCC`, `descriptionAgios`, `montantAgios`, `numcompte`) 
+    //             VALUES (NULL, '','".$agios->getMontantAgios()."','".$agios->getCompteAssoc()."')");
 
-    }
+    // }
 
    
     function readAllCompte(){

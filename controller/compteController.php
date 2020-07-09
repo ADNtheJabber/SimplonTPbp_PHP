@@ -11,25 +11,25 @@
             $compte = new Compte();
             
             $compte->setNumcompte($_POST['noCompte']);
-            $compte->setTypeCompte($_POST['typeCompte']);
+            $compte->setTypeCompte($_POST['Compte']);
             $compte->setFraisOuv($_POST['fraisOuv']);
             $compte->setRemuneration($_POST['remu']);
             $compte->setDateDeblocage($_POST['dateDeblocage']);
             $compte->setDepotInitial($_POST['depotCC']);
-            $compte->setIdClientPhysique($_POST['IdClientPhysique'] !='' ? $_POST['IdClientPhysique'] : NULL);
-            $compte->setIdClientEntreprise($_POST['IdClentEntreprise'] !='' ? $_POST['IdClentEntreprise'] : NULL);
+            //$compte->setIdClientPhysique($_POST['idClient'] !='' ? $_POST['idClient'] : NULL);
+           // $compte->setIdClientEntreprise($_POST['IdClient'] !='' ? $_POST['IdClientEntreprise'] : NULL);
                         
 
-            $agios = new Agios();
+            //$agios = new Agios();
 
-            $agios->setMontant($_POST['agiosCC']);
-            $agios->setCompteAssoc($_POST['noCompte']);
+            // $agios->setMontantAgios($_POST['agiosCC']);
+            // $agios->setCompteAssoc($_POST['noCompte']);
 
-            $log1 = addAgios($agios);
+            // $log1 = addAgios($agios);
 
             $log2 = addcompte($compte);
             
-            if ($log1 && $log2) {
+            if ($log2) {
                echo 'Ajout effectue avec succes !';
             } else {
                 echo 'Ajout Non effectue';

@@ -48,9 +48,9 @@
                             <legend>Informations du Compte </legend>
     
                             <label for="typeCompte" id="TypeCompte" name="typeCompte" >Type de compte: </label><br>
-                                <select name="typeCompte" id="type">
-                                    <option value="courant">Compte Courant</option>
-                                    <option value="epargne">Compte Epargne</option>
+                                <select name="Compte" id="type">
+                                    <option  value="courant">Compte Courant</option>
+                                    <option  value="epargne">Compte Epargne</option>
                                     <option value="bloque">Compte Bloque</option>
                                 </select>    
 
@@ -81,7 +81,7 @@
                             <label for="client">Client Associé: </label>
 
                                 <div class="search_box" id="byCNI">
-                                    <input type="number" placeholder="saisir le cni ...">
+                                    <input type="number" name="idClient" placeholder="saisir le cni ...">
                                     <button><i class="fa fa-search" id="goSearch"></i></button>
                                 </div>
 
