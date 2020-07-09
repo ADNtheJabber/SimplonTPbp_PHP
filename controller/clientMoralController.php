@@ -1,7 +1,9 @@
 <?php
-    require_once '../model/clientMoraldb.php';
-    require_once '../entities/clientMoral.php';
-  
+    require_once '../config/autoload.php';
+    
+    use entities\Moral\ClientMoral;
+    use model\Moral\addClientMoral;
+   
     extract($_POST);
 
     if (isset($_POST)) {

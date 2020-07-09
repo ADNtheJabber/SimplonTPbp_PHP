@@ -1,6 +1,9 @@
 <?php
-    require_once 'dbConnect.php';
-
+    namespace model\Moral;
+   
+    use model\dbConnect\DbAccess;
+   
+    
     //client entreprise req
 
     function addClientMoral ($clientMoral){

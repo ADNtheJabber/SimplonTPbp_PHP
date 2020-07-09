@@ -1,5 +1,7 @@
 <?php
-    require_once 'dbConnect.php';
+    namespace model\Login;
+
+    use model\dbConnect\DbAccess;
     
 
     function verifyInfos($logger) {

@@ -78,12 +78,12 @@
                                 <input type="date" id="dateDeblocage" name="dateDeblocage" placeholder="date de reouverture"/><br>
                                 <span id="date_error"></span><br>
 
-                            <label for="client">Client Associé: </label>
+                            <!-- <label for="client">Client Associé: </label>
 
                                 <div class="search_box" id="byCNI">
                                     <input type="number" name="idClient" placeholder="saisir le cni ...">
                                     <button><i class="fa fa-search" id="goSearch"></i></button>
-                                </div>
+                                </div> -->
 
                                   <!-- <label for="entreprise">Client Moral-</label>
                                 <input type="radio" name="searchInput"id="searchEntreprise"/><br> -->

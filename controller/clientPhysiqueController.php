@@ -1,6 +1,8 @@
 <?php
-    require '../model/clientPhysiquedb.php';
-    include '../entities/clientPhysique.php';
+    require_once '../config/autoload.php';
+    
+    use entities\Physique\ClientPhysique;
+    use model\Physique\addClientPhysique;
   
     extract($_POST);
 

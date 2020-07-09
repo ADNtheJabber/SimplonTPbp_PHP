@@ -1,5 +1,5 @@
 <?php 
-
+    namespace model\dbConnect;
     Class DbAccess {
 
         public function getConnex(){

@@ -1,7 +1,20 @@
-<?php 
-    require '../controller/listeMoralController.php';
-    $clientsEntreprise = $log->fetchAll(); ?>
+<?php
+    use model\dbConnect\DbAccess;
+    //select client entreprise req
+    $connexion = new DbAccess();
+       
+    $conn = $connexion->getConnex();
 
+    // var_dump($conn);
+    // die;
+    
+    return $conn->exec("SELECT * FROM 'compte'");
+
+    $compte = $sql->fetchAll();
+    // var_dump($compteEntreprise);
+    // die;
+       
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +43,10 @@
                 <li><a href="ajoutClient">Ajouter client</a></li>
                 <li><a href="ajoutCompte">Ajouter compte</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Listes des clients</a>
+                    <a href="javascript:void(0)" class="dropbtn">Listes des compte$compte</a>
                     <div class="dropdown-content">
-                      <a href="listePhysique">Liste Clients Particuliers</a>
-                      <a href="listeMoral">Liste Clients Entreprises</a>
+                      <a href="listePhysique">Liste compte$compte Particuliers</a>
+                      <a href="listeMoral">Liste compte$compte Entreprises</a>
                     </div>
                 </li>
                 <li><a href="#">Virement</a></li>
@@ -47,18 +60,16 @@
 
     <ul>
         <table>
-            <th>nom</th>
-            <th>adresse</th>
-            <th>telephone</th>
-            <th>email</th>
-                       
-        <?php foreach ($clientsEntreprise as $clients): ?>
+            <th>id</th>
+            <th>numero</th>
+            <th>type</th>
+                                   
+        <?php foreach ($comptes as $compte): ?>
             <tr>
                 
-                <td><?= $clients['nom_entreprise']?></td>
-                <td><?= $clients['adresse']?></td>
-                <td><?= $clients['tel']?></td>
-                <td><?= $clients['email']?></td>
+                <td><?= $compte['idCompte']?></td>
+                <td><?= $compte['numerocompte']?></td>
+                <td><?= $compte['type_compte']?></td>
 
             </tr>
        

@@ -1,16 +1,11 @@
 <?php
-    require_once '../../model/dbConnect.php';
-
+    use model\dbConnect\DbAccess;
     //select client Physique req
     $connexion = new DbAccess();
        
     $conn = $connexion->getConnex();
       
-    $sql = $conn->prepare("SELECT * FROM `client_Physique`");
-
-    $sql->execute();
-
-    return $sql;
+    return $conn->exec("SELECT * FROM `client_Physique`");
 
     $clientsPhysique = $sql->fetchAll();
 ?>

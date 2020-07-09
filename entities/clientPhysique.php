@@ -1,4 +1,6 @@
 <?php
+
+    namespace entities\Physique;
 Class ClientPhysique {
 
     private $id;

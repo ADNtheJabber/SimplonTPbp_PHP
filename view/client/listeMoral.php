@@ -1,6 +1,5 @@
 <?php
-    require_once '../../model/dbConnect.php';
-
+    use model\dbConnect\DbAccess;
     //select client entreprise req
     $connexion = new DbAccess();
        
@@ -9,12 +8,7 @@
     // var_dump($conn);
     // die;
     
-    $sql = $conn->prepare("SELECT * FROM 'client_entreprise'");
-
-    $sql->execute();
-    
-
-    // return $sql;
+    return $conn->exec("SELECT * FROM 'client_entreprise'");
 
     $clientsEntreprise = $sql->fetchAll();
     // var_dump($clientsEntreprise);

@@ -1,7 +1,10 @@
 <?php
-    require_once '../model/comptedb.php';
-    require_once '../entities/compte.php';
-    require_once '../entities/agios.php';
+    require_once '../config/autoload.php';
+    
+    use entities\Compte\Compte;
+    use entities\Agios\Agios;
+    use model\Compte\addCompte;
+    
   
     extract($_POST);
 
@@ -11,7 +14,7 @@
             $compte = new Compte();
             
             $compte->setNumcompte($_POST['noCompte']);
-            $compte->setTypeCompte($_POST['Compte']);
+            //$compte->setTypeCompte($_POST['Compte']);
             $compte->setFraisOuv($_POST['fraisOuv']);
             $compte->setRemuneration($_POST['remu']);
             $compte->setDateDeblocage($_POST['dateDeblocage']);

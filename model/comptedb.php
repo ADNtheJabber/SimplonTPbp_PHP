@@ -1,5 +1,7 @@
 <?php
-    require_once 'dbConnect.php';
+    namespace model\Compte;
+    
+    use model\dbConnect\DbAccess;
 
     function addCompte($compte){
         $connexion = new DbAccess();

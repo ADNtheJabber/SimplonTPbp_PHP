@@ -1,4 +1,8 @@
 <?php
+    require_once '../config/autoload.php';
+    
+    use entities\log\logger;
+    use model\log\verifyInfos;
     require_once '../model/logindb.php';
     require_once '../entities/logger.php';
     //include '../index.php';

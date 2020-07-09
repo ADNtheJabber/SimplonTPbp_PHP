@@ -1,5 +1,6 @@
 <?php
 
+    namespace entities\Agios;
     class Agios {
         
         private $montantAgios;

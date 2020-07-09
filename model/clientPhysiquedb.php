@@ -1,6 +1,7 @@
 <?php
-    require_once 'dbConnect.php';
-        
+    namespace model\Physique;
+    
+    use model\dbConnect\DbAccess;
     //client physique req
 
     function addClientPhysique ($clientPhysique){
