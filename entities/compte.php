@@ -1,6 +1,6 @@
 <?php
 
-    namespace entities\Compte;
+    namespace entities;
     Class Compte {
 
         private $id;

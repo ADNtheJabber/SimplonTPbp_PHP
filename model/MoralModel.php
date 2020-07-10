@@ -1,10 +1,9 @@
 <?php
-    namespace model\Moral;
+    namespace model;
    
-    use model\dbConnect\DbAccess;
+    use entities\clientMoral;
    
-    
-    //client entreprise req
+class MoralModel {
 
     function addClientMoral ($clientMoral){
 
@@ -24,4 +23,6 @@
         return $conn->exec("SELECT * FROM client_entreprise");
 
     }
+}
+    
 ?>

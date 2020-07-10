@@ -1,5 +1,7 @@
 <?php 
-    namespace model\dbConnect;
+    namespace model;
+    use PDO;
+    
     Class DbAccess {
 
         public function getConnex(){

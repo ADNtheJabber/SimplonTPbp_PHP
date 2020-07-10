@@ -1,6 +1,6 @@
 <?php
 
-    namespace entities\Agios;
+    namespace entities;
     class Agios {
         
         private $montantAgios;

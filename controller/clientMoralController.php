@@ -1,8 +1,9 @@
 <?php
     require_once '../config/autoload.php';
     
-    use entities\Moral\ClientMoral;
-    use model\Moral\addClientMoral;
+    use model\MoralModel;
+    use entities\clientMoral;
+    use model\DbAccess;
    
     extract($_POST);
 

@@ -1,9 +1,10 @@
 <?php
     require_once '../config/autoload.php';
     
-    use entities\Physique\ClientPhysique;
-    use model\Physique\addClientPhysique;
-  
+    use model\PhysiqueModel;
+    use entities\clientPhysique;
+    use model\DbAccess;
+
     extract($_POST);
 
     if (isset($_POST)) {

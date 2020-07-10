@@ -1,5 +1,5 @@
 <?php
-    namespace entities\Moral;
+    namespace entities;
    Class ClientMoral {
 
     private $id;

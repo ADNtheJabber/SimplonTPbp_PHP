@@ -1,6 +1,6 @@
 <?php
 
-    namespace entities\log;
+    namespace entities;
     Class Logger{
 
         private $login, $password, $poste;

@@ -1,9 +1,10 @@
 <?php
-    namespace model\Physique;
+    namespace model;
     
-    use model\dbConnect\DbAccess;
-    //client physique req
+    use entities\clientPhysique;
 
+class PhysiqueModel{
+    
     function addClientPhysique ($clientPhysique){
         $connexion = new DbAccess();
        
@@ -22,4 +23,6 @@
         return $conn->exec("SELECT * FROM `client_physique`");
 
     }
+}
+    
 ?>

@@ -1,11 +1,11 @@
 <?php
     require_once '../config/autoload.php';
     
-    use entities\log\logger;
-    use model\log\verifyInfos;
-    require_once '../model/logindb.php';
-    require_once '../entities/logger.php';
-    //include '../index.php';
+    use entities\Logger;
+    use model\verifyInfos;
+    // require_once '../model/logindb.php';
+    // require_once '../entities/logger.php';
+    // //include '../index.php';
 
     extract($_POST);
 

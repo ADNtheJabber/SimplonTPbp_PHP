@@ -1,9 +1,10 @@
 <?php
     require_once '../config/autoload.php';
     
-    use entities\Compte\Compte;
-    use entities\Agios\Agios;
-    use model\Compte\addCompte;
+    use model\CompteModel;
+    use entities\Compte;
+    use model\DbAccess;
+    
     
   
     extract($_POST);
@@ -30,7 +31,7 @@
 
             // $log1 = addAgios($agios);
 
-            $log2 = addcompte($compte);
+            $log2 = CompteModel::createCompte($compte);
             
             if ($log2) {
                echo 'Ajout effectue avec succes !';
@@ -40,6 +41,3 @@
 
             
         }
-
-        // idCompte numcompte type_compte fraisOuverture remuAnnuelle dateDeblocage depotInitialCC id_client_physique id_client_entreprise
-    

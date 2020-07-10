@@ -1,8 +1,9 @@
 <?php
-    namespace model\Login;
+    namespace model;
 
-    use model\dbConnect\DbAccess;
+    use entities\Logger;
     
+class Verif{
 
     function verifyInfos($logger) {
 
@@ -10,8 +11,8 @@
        
         $conn = $connexion->getConnex();
       
-        // SELECT * FROM `employe` WHERE `nature_poste`='responsable' AND `login`='cheDiouf123' AND `password`='Xeuycito'
-
         return $conn->prepare("SELECT * FROM `employe` WHERE `nature_poste`='".$logger->getPoste()."' AND `login`='".$logger->getLogin()."' AND `password`='".$logger->getPassword()."'");
 
     }
+}
+    
